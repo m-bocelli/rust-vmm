@@ -400,9 +400,9 @@ impl Vmm {
             // Guest memory fits before the MMIO gap.
             None | Some(0) => vec![(GuestAddress(0), mem_size)],
             // Guest memory extends beyond the MMIO gap.
-            Some(remaining) => vec![
+            Some(reging) => vec![
                 (GuestAddress(0), MMIO_GAP_START as usize),
-                (GuestAddress(MMIO_GAP_END), remaining),
+                (GuestAddress(MMIO_GAP_END), reging),
             ],
         }
 
