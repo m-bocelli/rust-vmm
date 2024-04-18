@@ -21,6 +21,3 @@ vm-vcpu = { path = "src/vm-vcpu" }
 vm-vcpu-ref = { path = "src/vm-vcpu-ref" }
 utils = { path = "src/utils" }
 arch = { path = "src/arch" }
-
-[workspace]
-members = ["src/vm-vcpu-ref"]
